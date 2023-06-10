@@ -31,9 +31,9 @@ Also, the hyperparameters tuning process can push the performance a little furth
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 |model|hpo1|hpo2|hpo3|score|
 |--|--|--|--|--|
-|initial|'default'|'default|'default|1.81009|
-|add_features|'default|'default|'default|0.74577|
-|hpo|"XGBoost(XGB): n_estimators: ag.space.Int(lower=100, upper=400, default=100), max_depth: ag.space.Int(lower=4, upper=12, default=6), learning_rate: ag.space.Real(1e-4, 1e-2, default=5e-4, log=True)"|"CatBoost(CAT): 'iterations' : 100, 'learning_rate': ag.space.Real(1e-4, 1e-2, default=5e-4, log=True), 'depth' : ag.space.Int(lower=6, upper=10)"|"Gradient Boosting Machine(GBM): 'num_boost_round': 100, 'num_leaves': ag.space.Int(lower=26, upper=66, default=36)"|0.49407|
+|initial|default|default|default|1.81009|
+|add_features|default|default|default|0.74577|
+|hpo|XGBoost(XGB): n_estimators: ag.space.Int(lower=100, upper=400, default=100), max_depth: ag.space.Int(lower=4, upper=12, default=6), learning_rate: ag.space.Real(1e-4, 1e-2, default=5e-4, log=True)|CatBoost(CAT): 'iterations' : 100, 'learning_rate': ag.space.Real(1e-4, 1e-2, default=5e-4, log=True), 'depth' : ag.space.Int(lower=6, upper=10)|Gradient Boosting Machine(GBM): 'num_boost_round': 100, 'num_leaves': ag.space.Int(lower=26, upper=66, default=36)|0.49407|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
