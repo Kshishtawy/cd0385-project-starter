@@ -12,7 +12,7 @@ WeightedEnsemble_L3 was the initial training top-ranked model, which combines pr
 ### What did the exploratory analysis find and how did you add additional features?
 After the initial Exploratory data analysis, I thought adding an hours column and changing seasons to categories might increase the quality of prediction but the improvement was unsatisfying at all. 
 
-Then, there are much more useful data in the dataset that can be utilized. From the hours, I made another column indicating the rush hours that might have higher demand. From the .describe() function on the data, I got to create other columns indicating the hot and cold temperatures along with the higher and lower level of humidity and wind speed. With all these more informative features added, the model performed quite well using the same default training parameters without any optimizations to the training itself.
+Then, I found that there are much more useful data in the dataset that can be utilized. From the hours, I made another column indicating the rush hours that might have higher demand. From the .describe() function on the data, I got to create other columns indicating the hot and cold temperatures along with the higher and lower level of humidity and wind speed. With all these more informative features added, the model performed quite well using the same default training parameters without any optimizations to the training itself.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
 The model improvement was quite noticeable after adding more informative features even though the training parameters were the same 
