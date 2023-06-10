@@ -15312,7 +15312,7 @@ Successfully installed Pillow-9.4.0 PyWavelets-1.3.0 absl-py-1.4.0 accelerate-0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create the .kaggle directory and an empty kaggle.json file</span>
@@ -15331,13 +15331,50 @@ Successfully installed Pillow-9.4.0 PyWavelets-1.3.0 absl-py-1.4.0 accelerate-0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">echo</span> <span class="nv">KAGGLE_USERNAME</span><span class="o">=</span><span class="s2">"kareemelshishtawy33"</span> &gt;&gt; .env
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="o">!</span><span class="nb">echo</span> <span class="nv">KAGGLE_KEY</span><span class="o">=</span><span class="s2">"ef91ea8db3346008eec5313c8dc83cc1"</span> &gt;&gt; .env
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fill in your user name and key from creating the kaggle account and API token file</span>
+<span class="o">!</span>pip install python-dotenv
 <span class="kn">import</span> <span class="nn">json</span>
-<span class="n">kaggle_username</span> <span class="o">=</span> <span class="s2">"kareemelshishtawy33"</span>
-<span class="n">kaggle_key</span> <span class="o">=</span> <span class="s2">"ef91ea8db3346008eec5313c8dc83cc1"</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">dotenv_values</span>
+
+<span class="n">CONFIG</span> <span class="o">=</span> <span class="n">dotenv_values</span><span class="p">(</span><span class="s1">'.env'</span><span class="p">)</span>
+
+<span class="n">kaggle_username</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'KAGGLE_USERNAME'</span><span class="p">]</span>
+<span class="n">kaggle_key</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s1">'KAGGLE_KEY'</span><span class="p">]</span>
 
 <span class="c1"># Save API token the kaggle.json file</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/root/.kaggle/kaggle.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -15347,6 +15384,32 @@ Successfully installed Pillow-9.4.0 PyWavelets-1.3.0 absl-py-1.4.0 accelerate-0.
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Requirement already satisfied: python-dotenv in /usr/local/lib/python3.7/site-packages (0.21.1)
+<span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span>
+<span class="ansi-yellow-fg">WARNING: You are using pip version 21.3.1; however, version 23.1.2 is available.
+You should consider upgrading via the &#39;/usr/local/bin/python3.7 -m pip install --upgrade pip&#39; command.</span>
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15377,10 +15440,11 @@ Successfully installed Pillow-9.4.0 PyWavelets-1.3.0 absl-py-1.4.0 accelerate-0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Download the dataset, it will be in a .zip file so you'll need to unzip it as well.</span>
+<span class="o">!</span>pip install kaggle
 <span class="o">!</span>kaggle competitions download -c bike-sharing-demand
 <span class="c1"># If you already downloaded it you can use the -o command to overwrite the file</span>
 <span class="o">!</span>unzip -o bike-sharing-demand.zip
@@ -15405,7 +15469,28 @@ Successfully installed Pillow-9.4.0 PyWavelets-1.3.0 absl-py-1.4.0 accelerate-0.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Archive:  bike-sharing-demand.zip
+<pre>Collecting kaggle
+  Using cached kaggle-1.5.13-py3-none-any.whl
+Collecting python-slugify
+  Using cached python_slugify-8.0.1-py2.py3-none-any.whl (9.7 kB)
+Requirement already satisfied: urllib3 in /usr/local/lib/python3.7/site-packages (from kaggle) (1.25.11)
+Requirement already satisfied: python-dateutil in /usr/local/lib/python3.7/site-packages (from kaggle) (2.8.2)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.7/site-packages (from kaggle) (4.39.0)
+Requirement already satisfied: six&gt;=1.10 in /usr/local/lib/python3.7/site-packages (from kaggle) (1.16.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.7/site-packages (from kaggle) (2021.10.8)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/site-packages (from kaggle) (2.22.0)
+Collecting text-unidecode&gt;=1.3
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 1.0 MB/s             
+Requirement already satisfied: idna&lt;2.9,&gt;=2.5 in /usr/local/lib/python3.7/site-packages (from requests-&gt;kaggle) (2.8)
+Requirement already satisfied: chardet&lt;3.1.0,&gt;=3.0.2 in /usr/local/lib/python3.7/site-packages (from requests-&gt;kaggle) (3.0.4)
+Installing collected packages: text-unidecode, python-slugify, kaggle
+Successfully installed kaggle-1.5.13 python-slugify-8.0.1 text-unidecode-1.3
+<span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span>
+<span class="ansi-yellow-fg">WARNING: You are using pip version 21.3.1; however, version 23.1.2 is available.
+You should consider upgrading via the &#39;/usr/local/bin/python3.7 -m pip install --upgrade pip&#39; command.</span>
+bike-sharing-demand.zip: Skipping, found more recently modified local copy (use --force to force download)
+Archive:  bike-sharing-demand.zip
   inflating: sampleSubmission.csv    
   inflating: test.csv                
   inflating: train.csv               
