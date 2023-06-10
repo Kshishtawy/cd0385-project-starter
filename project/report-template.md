@@ -15,7 +15,9 @@ After the initial Exploratory data analysis, I thought adding an hours column an
 Then, I found that there are much more useful data in the dataset that can be utilized. From the hours, I made another column indicating the rush hours that might have higher demand. From the .describe() function on the data, I got to create other columns indicating the hot and cold temperatures along with the higher and lower level of humidity and wind speed. With all these more informative features added, the model performed quite well using the same default training parameters without any optimizations to the training itself.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-The model improvement was quite noticeable after adding more informative features even though the training parameters were the same 
+The initial kaggle score without any feature engnieering was 1.810. After adding the new features of rush hours along with features related to temprature, humidty, and wind speeds. The model improvement was quite noticeable and reached a kaggle score of 0.746.
+
+Please note that I have added new features on two phases. The first phase was adding the hours column and changing seasons to category type and this didnt affect the score much. So, I worked on a second phase of feature engineering that included adding rush hours along with features related to high and low temperatures, humidity, and wind speeds. Actually, this second phase of feature engineering was the one that quite improved the kaggle score to be a score of 0.746.
 
 I think this happened because adding more informative features to the dataset enables the machine-learning models to utilize these features to make better predictions. If, for example, it knows the specific prediction it must make is within the rush hours, the feature will better guide the model to know there might be higher demand.
 
