@@ -21,7 +21,7 @@ I think this happened because adding more informative features to the dataset en
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-Using specific models improved the performance of the model more than others. However, further improving the model through tuning their hyperparameters was the thing that made improved the performance a little more. Using ag.space tool also proved useful in making AutoGluon automatically explore different combinations of hyperparameters during the hyperparameter tuning process.
+Using specific models improved the performance of the model more than others. However, further improving the model through tuning their hyperparameters was the thing that improved the performance a little more. Using ag.space tool also proved useful in making AutoGluon automatically explore different combinations of hyperparameters during the hyperparameter tuning process.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
 I think I would have done more exploratory data analysis. The performance of the model increased sharply after specifying some new useful features to the same model, and I haven't yet explored other columns like "atemp" or made a combination of two columns to come up with a more important feature.
